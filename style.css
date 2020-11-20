@@ -1,0 +1,118 @@
+body {
+    padding-top: 56px;
+    background-color: #838383;
+}
+
+p { 
+    margin-bottom: 8px; 
+}
+
+.navbar { 
+    font-family: 'Goldman', cursive !important;
+    font-size: 1.2em;
+}
+
+pre.bash {
+    background-color: black;
+    margin: 10px;
+    padding: 20px;
+    color: grey;
+    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
+
+/* BUTTON COLORS */
+.btn-primary, .btn-primary:active, .btn-primary:visited, .btn-primary:focus, .btn-primary.focus {
+    background-color: #b6b6b6 !important;
+    border-color: #b6b6b6;
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-family:Georgia;
+    box-shadow: none !important;
+}
+.btn-primary:hover {
+    background-color: #838383 !important;
+    border-color: #838383;
+    color: #FFFFFF;
+    border-radius: 20px;
+    font-family:Georgia;
+    box-shadow: none !important;
+}
+.btn-secondary, .btn-secondary:hover, .btn-secondary:active, .btn-secondary:visited, .btn-secondary:focus, .btn-secondary.focus {
+    background-color: #838383 !important;
+    border-color: #838383;
+    color: #FFFFFF;
+    border-radius: 0px;
+    box-shadow: none !important;
+    outline: #838383;
+}
+
+.jumbotron{
+    padding: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    /* allows for background images */
+	background-size: cover;
+    background-repeat: no-repeat;
+} 
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    /* height: 60px;
+    line-height: 60px; */
+    background-color: #838383;
+    font-size: .8em;
+    color: #FFFFFF;
+}
+
+/* vertical center */
+.centerme {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* image overlay on mouse hover */
+.image {
+    position:relative;
+    display:inline-block;
+    margin-bottom: 0em;
+ }
+ .overlay {
+    display:none;
+ }
+ .image:hover .overlay {
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    position:absolute;
+    top:0;
+    left:0;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    img {
+       vertical-align: top;
+    }
+ }
+
+ /* jumbotron overlay on mouse hover */
+ .hovjumbo { position:relative;}
+ .hovjumbo:hover .overlay {
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.7);
+    position:absolute;
+    top:0;
+    left:0;
+    display:inline-block;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    img {
+       vertical-align: top;
+    }
+ }

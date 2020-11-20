@@ -1,0 +1,308 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+
+    <!-- style sheets -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- title and favicon -->
+    <title>SquiggleFly</title>
+    <link rel="icon" href="images/drone.png"/>
+
+</head>
+
+<body>
+    <center>
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-md fixed-top justify-content-center" style="background-color: #838383; color: rgb(255, 255, 255);">
+            <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+                <ul class="navbar-nav mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section1" style="color: #FFFFFF;">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section2" style="color: #FFFFFF;">Requirements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section3" style="color: #FFFFFF;">Installation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section4" style="color: #FFFFFF;">Usage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section5" style="color: #FFFFFF;">Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#section6" style="color: #FFFFFF;">Architecture</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- header -->
+        <div class="jumbotron jumbotron-fluid" style="background-image: url('images/squiggles.png'); color: #000000;">
+            <h1 style="font-family:'Dancing Script', cursive; font-size:4em;">SquiggleFly</h1>
+        </div>        
+    </center>
+
+    <!-- About -->
+    <div id="section1" class="jumbotron jumbotron-fluid" style="background-color: #eeeeee; color: #000000; font-family: 'Noto Sans JP', sans-serif;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">About</h2>
+            <br>
+        </center>
+
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                <center>
+                    <img src="images/drone.png" style="height: 200px;"/>
+                </center>
+            </div>
+            <div class="col-5">
+                SquiggleFly allows users to fly drones on complicated or specific paths without having to worry about coding them or doing so manually. 
+                </br> </br>
+                <b>SquiggleFly makes flying drones accessible to everyone.</b>
+                </br> </br>
+                SquiggleFly was created by Sean Crotty, Jack Masciopinto, Katie McHugh, and Jack Morgan. It was developed through an Agile process 
+                over the course of 4 weeks.
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+            
+    </div>
+
+    <!-- Requirements -->
+    <div id="section2" class="jumbotron jumbotron-fluid" style="font-family: 'Noto Sans JP', sans-serif; background-color: #ffffff; color: #000000;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">Requirements</h2>
+            <br>        
+        </center>
+
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                <ul>
+                    <li>When the user draws a pattern on their phone, that same pattern should be sent to the drone.</li>
+                    <li>The points which make up the pattern must be collected as the pattern is being drawn.</li>
+                    <li>The drone will hover at 10 meters until it receives instructions from the application regarding the path it should fly.</li>
+                    <li>Once the drone receives a pattern from the application, it will immediately start executing that fly pattern.</li>
+                    <li>When the drone finishes flying the path it was sent, it will continue to hover until it receives further instructions from the application.</li>
+                    <li>There must be some way for the users to exit the program with a failsafe.</li>
+                    <li>The user should be able to view the actual path that was flown by the drone layered against the path that they drew.</li>
+                    <li>We had to make sure that the canvas was of specified dimensions so that the user could not fly the drone beyond a certain distance away from its starting point.</li>
+                    <li>We had to make sure that the orientation of the canvas matched the way in which the drone actually flies so there are no surprises.</li>
+                </ul>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+    </div>
+
+    <!-- Installation -->
+    <div id="section3" class="jumbotron jumbotron-fluid" style="background-color: #eeeeee; color: #000000; font-family: 'Noto Sans JP', sans-serif;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">Installation</h2>
+            </br>
+        </center>
+            
+        <div class="row">
+            <div class="col-3">
+            </div>
+            <div class="col">
+                <pre class="bash">
+root@my-machine:~$ <span style="color: #ffffff">git clone https://github.com/SAREC-Lab/SquiggleFly.git</span>
+root@my-machine:~$ <span style="color: #ffffff">cd SquiggleFly</span>
+root@my-machine:~/SquiggleFly$ <span style="color: #ffffff">pip install -r requirements</span></pre>
+            </div>
+            <div class="col-3">
+            </div>
+        </div>
+    </div>
+
+    <!-- Usage -->
+    <div id="section4" class="jumbotron jumbotron-fluid" style="font-family: 'Noto Sans JP', sans-serif; background-color: #ffffff; color: #000000;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">Usage</h2>
+            <br>
+        </center>
+
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                <center>
+                    <h3>Terminal 1</h3>
+                </center>
+                <pre class="bash">
+root@my-machine:~/SquiggleFly$ <span style="color: #ffffff">python drone_controller.py</span></pre>
+            </div>
+            <div class="col">
+                <center>
+                    <h3>Terminal 2</h3>
+                </center>
+                <pre class="bash">
+root@my-machine:~$ <span style="color: #ffffff">firefox</span></pre>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+                
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                </br>
+                <ol>
+                    <li>Once your drone is ready to connect to your laptop, run the commands above in two separate terminals as shown.</li>
+                    <li>In the Firebox browser which pops up, navigate to the index.html file within the SquiggleFly repo.</li>
+                    <li>You will see a view like the one below. This is where you will draw the path you would like for your drone to fly. 
+                        You can clear the path at any point to start over by clicking "Clear Path". When you would like your drone to fly the path, 
+                        just click "Fly Path", and SquiggleFly will do the rest. You can check the progress of your drone in Terminal 1.
+                    </li>
+                </ol>
+                </br>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+
+        <center>
+            <img src="images/usage.png" style="height: 600px;"/>
+        </center>
+    </div>
+
+    <!-- Testing -->
+    <div id="section5" class="jumbotron jumbotron-fluid" style="background-color: #eeeeee; color: #000000; font-family: 'Noto Sans JP', sans-serif;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">Testing</h2>
+            <br>
+        </center>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                Unfortunately, the drones were not cooperating, and we were unable to test our code out in the field. However, we ran plenty of tests 
+                via the simulation. We tested a variety of different paths ranging from long to short and starting in all different parts of the 
+                sketchpad. We also tested different paths that cross over themselves and travel along all parts of the sketchpad. A few of our test 
+                paths are shown here below. </br></br>
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+
+        <center>
+            <div class="row">
+                <div class="col">
+                    <img src="images/terminal.png" style="height: 475px;"/>
+                    </br></br>
+                    Test 1: Terminal Output
+                </div>
+                <div class="col">
+                    <img src="images/test1draw.png" style="height: 300px;"/>
+                    </br></br>
+                    Test 1: Intended Path
+                </div>
+                <div class="col">
+                    <img src="images/test1path.png" style="height: 300px;"/>
+                    </br></br>
+                    Test 1: Flown Path
+                </div>
+            </div>
+            </br> </br>
+            <div class="row">
+                <div class="col-2">
+                </div>
+                <div class="col">
+                    <img src="images/test2draw.png" style="height: 300px;"/>
+                    </br></br>
+                    Test 2: Intended Path
+                </div>
+                <div class="col">
+                    <img src="images/test2path.png" style="height: 300px;"/>
+                    </br></br>
+                    Test 2: Flown Path
+                </div>
+                <div class="col-2">
+                </div>
+            </div>
+        </br> </br>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col">
+                <img src="images/test3draw.png" style="height: 300px;"/>
+                </br></br>
+                Test 3: Intended Path
+            </div>
+            <div class="col">
+                <img src="images/test3path.png" style="height: 300px;"/>
+                </br></br>
+                Test 3: Flown Path
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+        </center>
+
+
+        
+    </div>
+
+    <!-- Architecture -->
+    <div id="section6" class="jumbotron jumbotron-fluid" style="font-family: 'Noto Sans JP', sans-serif; background-color: #ffffff; color: #000000;">
+        <center>
+            <h2 style="font-family:'Goldman', cursive; color: #000000;">Architecture</h2>
+            <br>
+        </center>
+            <div class="row">
+                <div class="col">
+                    <center>
+                    <img src="images/architecture.png" style="height: 300px;"/></center>
+                </div>
+                <div class="col">
+                    Our project is a web application which communicates with a drone via Mavlink. We used Flask as our web framework, as it is written 
+                    in Python, and we are most comfortable using Python to communicate with and control the drone. We integrated the Python code for 
+                    the drones into the Python file which runs the web application. We implemented a drawing canvas feature through JavaScript on the 
+                    frontend, and our coordinate-gathering algorithm on the frontend smartly turns the path drawn into a list of coordinates. Once 
+                    the "Fly Path" button has been clicked after a path has been drawn, those points are received on the backend and transformed 
+                    into real-world coordinates based on the current position of the drone, and the drone then flies the path based on those waypoints.
+                </div>
+            </div>
+        
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container" style="padding-bottom: 0%;">
+            <center>
+                <p> </p>
+                <p> </p>
+                <p>
+                <a href="https://github.com/SAREC-Lab/SquiggleFly" target="_blank"><img src="images/github.png" style="height:50px;"/></a> 
+                </p>
+            </center>      
+        </div>
+    </footer>
+
+    <!-- scripts for Boostrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+
+</html>
